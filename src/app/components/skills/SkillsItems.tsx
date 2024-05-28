@@ -7,7 +7,7 @@ function SkillsItems() {
 
 
     const [isIntersecting, setIsIntersecting] = useState(false);
-    const skillsItems:any = useRef(null);
+    const skillsItems: any = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -48,6 +48,16 @@ function SkillsItems() {
                 <li className="opacity-0">
                     <span className="flex bg-[#D1D8C5] text-black text-[20px] border-white rounded-lg py-2 px-4 border-solid border-2 align-middle text-center justify-center font-medium">
                         <ButtonAnimation buttonText="Nextjs" />
+                    </span>
+                </li>
+                <li className="col-span-1 opacity-0 max-sm:col-span-1">
+                    <span className="flex bg-[#D1D8C5] text-black text-[20px] border-white rounded-lg py-2 px-4 border-solid border-2 align-middle text-center justify-center font-medium">
+                        <ButtonAnimation buttonText="Reactjs" />
+                    </span>
+                </li>
+                <li className="col-span-2 opacity-0 max-sm:col-span-1">
+                    <span className="flex bg-[#D1D8C5] text-black text-[20px] border-white rounded-lg py-2 px-4 border-solid border-2 align-middle text-center justify-center font-medium">
+                        <ButtonAnimation buttonText="React Native" />
                     </span>
                 </li>
                 <li className="col-span-2 opacity-0 max-sm:col-span-1">

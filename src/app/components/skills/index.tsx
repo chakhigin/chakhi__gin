@@ -13,6 +13,9 @@ function Skills() {
                             <Heading title="Skills" />
                         </div>
                         <div className="min-w-[80%]">
+                            <div className="skills-experience">
+                                <Heading title="4 Years Expreince"/>
+                            </div>
                             <SkillsItems />
                         </div>
                     </div>

@@ -115,7 +115,18 @@ body::before {
     transform: translateY(5rem) rotateZ(9deg)
 }
 
+.skills-experience h2{
+    font-size:28px;
+    color:var(--button-color);
+}
+
 .contact-button .second-item span,
 .skills .second-item span {
     color: #000;
+}
+
+@media (max-width:678px){
+    body:before{
+        --calH: calc(9.999999% - 1px);
+    }
 }
