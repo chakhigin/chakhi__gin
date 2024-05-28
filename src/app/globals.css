@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+*/
+
+:root {
+    --button-color: #BED754;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::before,
+*::after {
+    box-sizing: content-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    /* font-family: "Roboto Slab", serif; */
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #000;
+    position: relative;
+}
+
+h1 {
+    /* font-family: "Roboto Slab", serif; */
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+li {
+    /* font-family: "Roboto Slab", serif; */
+}
+
+
+
+
+
+
+
+@keyframes clipIn {
+    80% {
+        opacity: 0.2;
+    }
+
+    99% {
+        clip-path: inset(0);
+    }
+
+    100% {
+        clip-path: none;
+        opacity: 0.2;
+    }
+}
+
+.main-content {
+    overflow: hidden;
+}
+
+
+body::before {
+    --calH: calc(14.3333333333% - 1px);
+    --calW: calc(20% - 1px);
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    mix-blend-mode: difference;
+    background: repeating-linear-gradient(to left, rgba(245, 242, 235, 0) 0 var(--calH), #989898 var(--calH) calc(var(--calH) + 1px));
+    --to-opacity: 0.2;
+    opacity: var(--to-opacity);
+    overflow: hiddne;
+}
+
+body::before {
+    content: "";
+    clip-path: inset(440% 440% 440% 440%);
+    animation: clipIn 1.2s .1s cubic-bezier(0.5, 0, 0.2, 1) forwards;
+}
+
+.intro-text span {
+    background: linear-gradient(90deg, #B3A6F9 0%, #E0C3FC 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    margin-top: 9px;
+}
+
+.text span {
+    opacity: 0;
+    transform: rotateZ(9deg);
+}
+
+.heading h2 {
+    opacity: 0;
+    transform: translateY(5rem) rotateZ(9deg)
+}
+
+.contact-button .second-item span,
+.skills .second-item span {
+    color: #000;
+}
