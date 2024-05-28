@@ -18,7 +18,7 @@ function ContactButton({ text }: ContactButtonProps) {
     const [contact, setContact] = useState<number>();
 
     useEffect(() => {
-        const contactContainer = document.querySelector('.contact');
+        const contactContainer:any = document.querySelector('.contact');
         setContact(contactContainer.offsetTop);
     }, []);
 

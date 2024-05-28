@@ -13,7 +13,7 @@ function Menu() {
     const [skills, setSkills] = useState<number>();
     const [works, setWorks] = useState<number>();
     const [contact, setContact] = useState<number>();
-    const menu = useRef(null);
+    const menu:any = useRef(null);
     useGSAP(() => {
         gsap.to(menu.current.children, {
             opacity: 1,
@@ -23,9 +23,9 @@ function Menu() {
         })
     })
     useEffect(() => {
-        const skills = document.querySelector('.skills');
-        const works = document.querySelector('.works');
-        const contact = document.querySelector('.contact');
+        const skills:any = document.querySelector('.skills');
+        const works:any = document.querySelector('.works');
+        const contact:any = document.querySelector('.contact');
         setSkills(skills?.offsetTop + 18)
         setWorks(works?.offsetTop + 18)
         setContact(contact?.offsetTop + 18)

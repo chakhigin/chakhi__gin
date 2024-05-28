@@ -21,11 +21,11 @@ function TextAnimation({ text, className, duration }: TextAnimationProps) {
     const textItem = useRef<any>();
     useGSAP(
         () => {
-            let typeSplit = new SplitType('.text', {
+            let textSplit = new SplitType('.text', {
                 types: 'words',
                 tagName: 'span'
             })
-            gsap.to(typeSplit.words, {
+            gsap.to(textSplit.words, {
                 y: -112,
                 opacity: 1,
                 duration: duration || 0.7,

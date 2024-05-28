@@ -12,7 +12,7 @@ interface Heading {
 
 function Heading({ title }: Heading) {
     const [isIntersecting, setIsIntersecting] = useState(false);
-    const heading = useRef(null);
+    const heading:any = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(

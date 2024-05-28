@@ -6,10 +6,9 @@ import Heading from "../common/heading";
 
 function Contact() {
 
-    const contact = useRef();
+    const contact: any = useRef();
 
     const [isIntersecting, setIsIntersecting] = useState(false);
-    const skillsItems = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -18,7 +17,6 @@ function Contact() {
             },
             { rootMargin: "-100px" }
         );
-        console.log(isIntersecting);
         observer.observe(contact.current);
 
         return () => observer.disconnect();
@@ -49,7 +47,7 @@ function Contact() {
                             <div ref={contact} className="flex flex-col gap-8">
                                 <div className="text-white text-[20px] opacity-0">
                                     <a href="tel:+989371238240" className="flex flex-row items-center text-[var(--button-color)] text-[18px]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smartphone"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>&nbsp;+989371238240</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>&nbsp;+989371238240</a>
                                 </div>
                                 <div className="text-white text-[20px] opacity-0">
                                     <a href="mailto: ehsan5bill@gmail.com" className="flex flex-row items-center text-[var(--button-color)] text-[18px]">

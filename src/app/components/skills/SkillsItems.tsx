@@ -7,7 +7,7 @@ function SkillsItems() {
 
 
     const [isIntersecting, setIsIntersecting] = useState(false);
-    const skillsItems = useRef(null);
+    const skillsItems:any = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -16,7 +16,6 @@ function SkillsItems() {
             },
             { rootMargin: "-100px" }
         );
-        console.log(isIntersecting);
         observer.observe(skillsItems.current);
 
         return () => observer.disconnect();

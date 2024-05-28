@@ -8,7 +8,7 @@ import WorksItems from "./WorksItems";
 function MyWorks() {
 
     const [isIntersecting, setIsIntersecting] = useState(false);
-    const worksItems = useRef(null);
+    const worksItems:any = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -17,7 +17,6 @@ function MyWorks() {
             },
             { rootMargin: "-100px" }
         );
-        console.log("work item");
         observer.observe(worksItems.current);
 
         return () => observer.disconnect();

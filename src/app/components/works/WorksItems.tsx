@@ -12,7 +12,7 @@ interface WorksItemsProps {
 }
 
 function WorksItems({ link, title }: WorksItemsProps) {
-    const workLink = useRef();
+    const workLink:any = useRef();
 
 
     const hoverLink = () => {

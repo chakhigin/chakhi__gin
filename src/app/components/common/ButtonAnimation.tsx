@@ -12,14 +12,16 @@ interface ButtonAnimationPorps {
 function ButtonAnimation({ buttonText, duration }: ButtonAnimationPorps) {
     const [linkItem, setLinkItem] = useState<string>(buttonText);
     const links = linkItem.split("");
+    useEffect(() => {
+        
+    },[])
     useGSAP(() => {
         const menuItems = document.querySelectorAll('.menu-item');
         menuItems.forEach((item) => {
             const tl = gsap.timeline({ paused: true })
             const firstItem = item.querySelector('.first-item');
             const secondItem = item.querySelector('.second-item');
-
-            tl.to(firstItem.children, {
+            tl.to(firstItem!.children, {
                 opacity: 0,
                 y: -20,
                 duration: 0.2,
@@ -29,7 +31,8 @@ function ButtonAnimation({ buttonText, duration }: ButtonAnimationPorps) {
                     from: 'end',
                 }
             })
-            tl.fromTo(secondItem.children,
+
+            tl.fromTo(secondItem!.children,
                 {
                     opacity: 0,
                     y: 20,
