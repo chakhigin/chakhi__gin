@@ -19,9 +19,9 @@ function ButtonAnimation({ buttonText, duration }: ButtonAnimationPorps) {
         const menuItems = document.querySelectorAll('.menu-item');
         menuItems.forEach((item) => {
             const tl = gsap.timeline({ paused: true })
-            const firstItem = item.querySelector('.first-item');
-            const secondItem = item.querySelector('.second-item');
-            tl.to(firstItem!.children, {
+            const firstItem:any = item.querySelector('.first-item');
+            const secondItem:any = item.querySelector('.second-item');
+            tl.to(firstItem.children, {
                 opacity: 0,
                 y: -20,
                 duration: 0.2,
@@ -32,7 +32,7 @@ function ButtonAnimation({ buttonText, duration }: ButtonAnimationPorps) {
                 }
             })
 
-            tl.fromTo(secondItem!.children,
+            tl.fromTo(secondItem.children,
                 {
                     opacity: 0,
                     y: 20,
